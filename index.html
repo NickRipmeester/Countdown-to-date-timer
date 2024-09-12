@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        .container {
+            width: 100vw;
+            height:200px;
+        }
+
+        .countdown {
+            display: flex;
+
+        }
+
+        .countdown div {
+            flex-basis: 100px;
+            text-align: center;
+        }
+        .countdown div p {
+            font-size: 80px;
+            margin-bottom: -14px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="countdown">
+            <div>
+                <p>00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p>00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p>00</p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p>00</p>
+                <span>Seconds</span>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        var countDownDate = new Date ("Oct 16, 2024 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+        },1000);
+    </script>
+    
+</body>
+</html>
