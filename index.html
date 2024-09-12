@@ -4,64 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <style>
-        .container {
+
+.main-container {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    
+    
+}
+        .timer-container {
             background-color: black;
-            font-family: Arial, Helvetica, sans-serif;
-            color: aliceblue;
+            font-family: "Roboto Mono", monospace;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            color: whitesmoke;
             margin: -5;
-        
+            text-align: center;
+            height: 200px;
 
         }
         
-        .container {
+        timer-container {
             width: 100vw;
-            height:200px;
+            margin-bottom: 20px;
         }
 
         .countdown {
+            margin: 0;
             display: flex;
             justify-content: center;
+            align-items: center;
+            height: 100%;
 
         }
 
+        
         .countdown div {
             flex-basis: 100px;
             text-align: center;
             margin: 0 5px;
+            
+            height: 100px;
+            
         }
         .countdown div p {
-            font-size: 80px;
-            margin-bottom: -14px;
+            margin-top: 0;
+            font-size: 60px;
+            margin-bottom: -7px;
         }
+
+     
         
     </style>
 </head>
-<body>
-    <div class="container">
+<body class="main-container">
+    <div class="timer-container">
         <div class="countdown">
-            <div>
+            <div class="numbers">
                 <p id="days">00</p>
                 <span>DAYS</span>
             </div>
             <div>
-                <p>:</p>
+                <p class="gold">:</p>
             </div>
-            <div>
+            <div class="numbers">
                 <p id="hours">00</p>
                 <span>HOURS</span>
             </div>
-            <div>
-                <p>:</p>
+            <div class="gold">
+                <p >:</p>
             </div>
-            <div>
+            <div class="numbers">
                 <p id="minutes">00</p>
-                <span>MINTUES</span>
+                <span>MINUTES</span>
             </div>
             <div>
-                <p>:</p>
+                <p class="gold">:</p>
             </div>
-            <div>
+            <div class="numbers">
                 <p id="seconds">00</p>
                 <span>SECONDS</span>
             </div>
@@ -69,7 +95,7 @@
         </div>
     </div>
     <script>
-        var countDownDate = new Date ("September 16, 2024 00:00:00").getTime();
+        var countDownDate = new Date ("September 16, 2024 14:00:00").getTime();
         var x = setInterval(function(){
             var now = new Date().getTime();
             var distance = countDownDate - now;
